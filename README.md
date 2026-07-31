@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Document Analyzer & Action Review Tool
 
-## Getting Started
+A full-stack, AI-driven application designed to ingest project documents (meeting notes, requirements drafts, implementation notes, decision records), extract structured insights, detect conflicts, align against organizational standards, and facilitate human review.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Core Workflow & Completed Scope
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Document Ingestion**: Upload up to 3 text-based documents (`.txt`, `.md`, `.json`, `.csv`).
+2. **AI Analysis & Extraction**:
+   - Classifies document types automatically.
+   - Extracts confirmed facts, decisions, assumptions, risks, open questions, and action items with exact source/section references.
+   - Identifies overlapping or conflicting statements across documents.
+   - Checks content against a predefined organizational knowledge base.
+3. **Human Review & Oversight**:
+   - Users can correct item classifications (`fact`, `assumption`, `unresolved`).
+   - Users can resolve or provide explanations for detected conflicts.
+   - Users must explicitly **approve, edit, or reject** proposed action items (the AI strictly never creates or assigns tasks automatically).
+4. **Data Persistence & Summary**:
+   - Persists all reviewed items, source references, and conflict resolutions into a SQLite database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Setup Instructions
 
-## Learn More
+### Prerequisites
+- **Node.js**: v18.x or higher
+- **npm**: v9.x or higher
+- **OpenAI API Key**: (For live extraction)
 
-To learn more about Next.js, take a look at the following resources:
+### Local Quickstart
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/123harshu/project-doc-analyze.git](https://github.com/123harshu/project-doc-analyze.git)
+   cd project-doc-analyze
